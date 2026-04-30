@@ -1,9 +1,157 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>App Ads</title>
-  </head>
-  <body>
-    <h1>App Ads Configuration</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>incpahl – Small Apps by Eduardo Pahl</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    /* Header */
+    .site-header { margin-bottom: 56px; }
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #00897b;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .site-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .site-header p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 560px;
+    }
+
+    /* Section titles */
+    .section-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 14px;
+    }
+
+    /* Card grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 22px 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+      border-color: #00897b;
+      box-shadow: 0 2px 12px rgba(0, 137, 123, 0.1);
+    }
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+    .card-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #00897b;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111;
+    }
+    .card-desc {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Divider */
+    hr { border: none; border-top: 1px solid #e8e8e8; margin: 48px 0; }
+
+    /* Footer */
+    footer { font-size: 0.82rem; color: #aaa; text-align: center; }
+    footer a { color: #00897b; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header class="site-header">
+    <p class="brand">incpahl</p>
+    <h1>Small Apps by Eduardo Pahl</h1>
+    <p>
+      This is the official hub for apps published under the <strong>incpahl</strong> developer account.
+      Here you'll find ad network configuration, privacy policies, and other public documentation
+      required by the app stores.
+    </p>
+  </header>
+
+  <!-- Apps -->
+  <p class="section-title">Apps</p>
+  <div class="card-grid">
+    <a class="card" href="privacy/quickbillsplitter/">
+      <span class="card-icon">🧾</span>
+      <span class="card-label">iOS · Android</span>
+      <span class="card-title">QuickBill Splitter</span>
+      <span class="card-desc">Split restaurant bills with ease. Add items, assign them to people, and share the result in seconds.</span>
+    </a>
+  </div>
+
+  <!-- Legal & Config -->
+  <p class="section-title">Legal &amp; Configuration</p>
+  <div class="card-grid">
+    <a class="card" href="privacy/quickbillsplitter/">
+      <span class="card-icon">🔒</span>
+      <span class="card-label">Privacy Policy</span>
+      <span class="card-title">QuickBill Splitter</span>
+      <span class="card-desc">How user data is collected, stored, and protected within the app.</span>
+    </a>
+    <a class="card" href="app-ads.txt">
+      <span class="card-icon">📋</span>
+      <span class="card-label">Ad Network</span>
+      <span class="card-title">app-ads.txt</span>
+      <span class="card-desc">Authorized digital sellers declaration for Google AdMob monetization.</span>
+    </a>
+  </div>
+
+  <hr />
+
+  <footer>
+    &copy; 2026 Eduardo Pahl &nbsp;·&nbsp;
+    <a href="mailto:incpahl@gmail.com">incpahl@gmail.com</a>
+  </footer>
+
+</div>
+</body>
 </html>
