@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>incpahl – Small Apps by Eduardo Pahl</title>
+  <title>Eduardo Pahl – Small Apps</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -21,24 +21,40 @@
     /* Header */
     .site-header { margin-bottom: 56px; }
     .brand {
-      font-size: 1.05rem;
+      font-size: 0.78rem;
       font-weight: 700;
       color: #00897b;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .site-header h1 {
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.25;
     }
     .site-header p {
       font-size: 1rem;
       color: #555;
-      max-width: 560px;
+      max-width: 520px;
+      margin-bottom: 20px;
     }
+    .social-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #00897b;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .social-link:hover { text-decoration: underline; }
 
     /* Section titles */
     .section-title {
@@ -62,21 +78,12 @@
       border: 1px solid #e8e8e8;
       border-radius: 10px;
       padding: 22px 20px;
-      text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
       gap: 6px;
-      transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .card:hover {
-      border-color: #00897b;
-      box-shadow: 0 2px 12px rgba(0, 137, 123, 0.1);
-    }
-    .card-icon {
-      font-size: 1.5rem;
-      margin-bottom: 4px;
-    }
+    .card-icon { font-size: 1.5rem; margin-bottom: 4px; }
     .card-label {
       font-size: 0.72rem;
       font-weight: 600;
@@ -94,62 +101,101 @@
       color: #666;
       line-height: 1.5;
     }
-
-    /* Divider */
-    hr { border: none; border-top: 1px solid #e8e8e8; margin: 48px 0; }
+    .card-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .card-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #00897b;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-link:hover { text-decoration: underline; }
 
     /* Footer */
-    footer { font-size: 0.82rem; color: #aaa; text-align: center; }
-    footer a { color: #00897b; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 1px solid #e8e8e8; margin: 48px 0; }
+    footer {
+      font-size: 0.82rem;
+      color: #aaa;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+    }
+    footer a { color: #aaa; text-decoration: none; }
+    footer a:hover { color: #00897b; text-decoration: underline; }
   </style>
 </head>
 <body>
 <div class="container">
 
   <header class="site-header">
-    <p class="brand">incpahl</p>
-    <h1>Small Apps by Eduardo Pahl</h1>
-    <p>
-      This is the official hub for apps published under the <strong>incpahl</strong> developer account.
-      Here you'll find ad network configuration, privacy policies, and other public documentation
-      required by the app stores.
-    </p>
+    <p class="brand">Pahl Studio</p>
+    <h1>Eduardo Pahl</h1>
+    <p>Mobile Software Engineer with 5+ years in Flutter and Android, backed by 8 years of enterprise systems experience. These are side projects I build for fun — a playground for testing libraries, architectures, and new ideas.</p>
+    <div class="social-links">
+      <a class="social-link" href="https://github.com/eduardopahl" target="_blank" rel="noopener">⤴ GitHub</a>
+      <a class="social-link" href="https://www.linkedin.com/in/eduardo-pahl/" target="_blank" rel="noopener">⤴ LinkedIn</a>
+      <a class="social-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">⤴ Play Store</a>
+    </div>
   </header>
 
-  <!-- Apps -->
   <p class="section-title">Apps</p>
   <div class="card-grid">
-    <a class="card" href="privacy/quickbillsplitter/">
+
+    <div class="card">
       <span class="card-icon">🧾</span>
-      <span class="card-label">iOS · Android</span>
+      <span class="card-label">Android</span>
       <span class="card-title">QuickBill Splitter</span>
       <span class="card-desc">Split restaurant bills with ease. Add items, assign them to people, and share the result in seconds.</span>
-    </a>
-  </div>
+      <div class="card-links">
+        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="privacy/quickbillsplitter/">🔒 Privacy</a>
+      </div>
+    </div>
 
-  <!-- Legal & Config -->
-  <p class="section-title">Legal &amp; Configuration</p>
-  <div class="card-grid">
-    <a class="card" href="privacy/quickbillsplitter/">
-      <span class="card-icon">🔒</span>
-      <span class="card-label">Privacy Policy</span>
-      <span class="card-title">QuickBill Splitter</span>
-      <span class="card-desc">How user data is collected, stored, and protected within the app.</span>
-    </a>
-    <a class="card" href="app-ads.txt">
-      <span class="card-icon">📋</span>
-      <span class="card-label">Ad Network</span>
-      <span class="card-title">app-ads.txt</span>
-      <span class="card-desc">Authorized digital sellers declaration for Google AdMob monetization.</span>
-    </a>
+    <div class="card">
+      <span class="card-icon">💧</span>
+      <span class="card-label">Android · Open Source</span>
+      <span class="card-title">H2OSync</span>
+      <span class="card-desc">Track your daily water intake and stay hydrated with smart reminders.</span>
+      <div class="card-links">
+        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://github.com/eduardopahl/h2o_simple" target="_blank" rel="noopener">⤴ GitHub</a>
+        <a class="card-link" href="privacy/h2o_simple/">🔒 Privacy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="card-icon">🟣</span>
+      <span class="card-label">Android · Open Source</span>
+      <span class="card-title">MoodDot</span>
+      <span class="card-desc">Log your mood daily and visualize emotional patterns over time.</span>
+      <div class="card-links">
+        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://github.com/eduardopahl/mood_dot" target="_blank" rel="noopener">⤴ GitHub</a>
+        <a class="card-link" href="privacy/mooddot/">🔒 Privacy</a>
+      </div>
+    </div>
+
   </div>
 
   <hr />
 
   <footer>
-    &copy; 2026 Eduardo Pahl &nbsp;·&nbsp;
-    <a href="mailto:incpahl@gmail.com">incpahl@gmail.com</a>
+    <span>&copy; 2026 Eduardo Pahl</span>
+    <span>
+      <a href="mailto:incpahl@gmail.com">incpahl@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="app-ads.txt">app-ads.txt</a>
+    </span>
   </footer>
 
 </div>
