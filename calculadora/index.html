@@ -79,6 +79,7 @@
     .icon-purple { background: #1a0d2a; }
     .icon-blue   { background: #0d1a2a; }
     .icon-green  { background: #0d2015; }
+    .icon-orange { background: #2a1a08; }
 
     .card-title { font-size: 1rem; font-weight: 700; color: #f0f0f0; }
     .card-sub   { font-size: 0.74rem; color: #555; margin-top: 2px; }
@@ -417,6 +418,34 @@
     <p class="hint">Média Brasil ~R$ 0,90/kWh</p>
   </div>
 
+  <!-- Desgaste da Máquina -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon icon-orange">⚙️</div>
+      <div>
+        <div class="card-title">Desgaste da Máquina</div>
+        <div class="card-sub">Depreciação proporcional ao tempo de impressão</div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label>Valor da impressora (R$)</label>
+        <div class="input-wrap">
+          <input type="number" id="printer-price" placeholder="0,00" min="0" step="0.01" oninput="calc()">
+          <span class="input-suffix">R$</span>
+        </div>
+      </div>
+      <div>
+        <label>Vida útil estimada (h)</label>
+        <div class="input-wrap">
+          <input type="number" id="printer-life" placeholder="2000" min="1" step="100" oninput="calc()">
+          <span class="input-suffix">h</span>
+        </div>
+      </div>
+    </div>
+    <p class="hint" id="wear-hint">Desgaste por hora: R$ 0,00</p>
+  </div>
+
   <!-- Embalagem -->
   <div class="card">
     <div class="card-header">
@@ -456,6 +485,10 @@
         <div class="bd-value" id="bd-packaging">R$ 0,00</div>
       </div>
       <div class="bd-item">
+        <div class="bd-label">Desgaste</div>
+        <div class="bd-value" id="bd-wear">R$ 0,00</div>
+      </div>
+      <div class="bd-item" style="grid-column: span 2;">
         <div class="bd-label">Total</div>
         <div class="bd-value" id="bd-total">R$ 0,00</div>
       </div>
@@ -566,18 +599,26 @@
     const tariff  = parseFloat(document.getElementById('tariff').value) || 0;
     const pkg     = parseFloat(document.getElementById('packaging').value) || 0;
 
+    const printerPrice = parseFloat(document.getElementById('printer-price').value) || 0;
+    const printerLife  = parseFloat(document.getElementById('printer-life').value) || 2000;
+
     const totalHours  = hours + mins / 60;
     const kWh         = (watts * totalHours) / 1000;
     const energyCost  = kWh * tariff;
     const matCost     = (grams / 1000) * pricePerKg;
-    const total       = energyCost + matCost + pkg;
+    const wearPerHour = printerPrice > 0 ? printerPrice / printerLife : 0;
+    const wearCost    = wearPerHour * totalHours;
+    const total       = energyCost + matCost + pkg + wearCost;
 
     document.getElementById('fil-gram-hint').textContent =
       'Custo por grama: ' + fmt(pricePerKg / 1000);
+    document.getElementById('wear-hint').textContent =
+      'Desgaste por hora: ' + fmt(wearPerHour);
 
     document.getElementById('bd-energy').textContent    = fmt(energyCost);
     document.getElementById('bd-material').textContent  = fmt(matCost);
     document.getElementById('bd-packaging').textContent = fmt(pkg);
+    document.getElementById('bd-wear').textContent      = fmt(wearCost);
     document.getElementById('bd-total').textContent     = fmt(total);
     document.getElementById('total-cost').textContent   = fmt(total);
 
