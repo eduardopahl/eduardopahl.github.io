@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eduardo Pahl – Small Apps</title>
+  <title>Eduardo Pahl · Senior Mobile Engineer</title>
+  <meta name="description" content="Eduardo Pahl, senior mobile engineer (Flutter and native Android/Kotlin) in Curitiba, Brazil. Co-founder of CoachUrself and maker of small apps on Google Play." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://eduardopahl.github.io/" />
+  <meta property="og:title" content="Eduardo Pahl · Senior Mobile Engineer" />
+  <meta property="og:description" content="Flutter and native Android (Kotlin). Co-founder of CoachUrself and maker of small apps on Google Play." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -27,7 +32,7 @@
     }
 
     /* Header */
-    .site-header { margin-bottom: 60px; }
+    .site-header { margin-bottom: 56px; }
 
     .brand {
       font-size: 0.72rem;
@@ -49,10 +54,16 @@
 
     .site-header p {
       font-size: 1rem;
-      color: #888;
-      max-width: 520px;
-      margin-bottom: 28px;
+      color: #9a9a9a;
+      max-width: 560px;
+      margin-bottom: 12px;
       line-height: 1.65;
+    }
+
+    .site-header .location {
+      font-size: 0.85rem;
+      color: #6f6f6f;
+      margin-bottom: 28px;
     }
 
     /* Social pill buttons */
@@ -86,8 +97,19 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #aaa;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
+
+    .section-intro {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 16px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .section-intro a { color: #00897b; text-decoration: none; }
+    .section-intro a:hover { text-decoration: underline; }
 
     /* Card grid */
     .card-grid {
@@ -113,6 +135,50 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
       border-color: #00897b;
+    }
+
+    /* Featured card (current work) */
+    .card-featured {
+      margin-bottom: 48px;
+      border-color: #1f4f4a;
+      background: linear-gradient(180deg, #16201f 0%, #18181b 60%);
+    }
+
+    .card-featured:hover { transform: none; }
+
+    .card-featured .card-desc { color: #8a8a8a; flex: none; }
+
+    .card-list {
+      list-style: none;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-list li {
+      font-size: 0.875rem;
+      color: #a8a8a8;
+      line-height: 1.55;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .card-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 0.62em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #00897b;
+    }
+
+    .card-note {
+      font-size: 0.78rem;
+      color: #5f5f5f;
+      margin-top: 12px;
     }
 
     /* Icon wrap */
@@ -183,6 +249,11 @@
 
     footer a { color: #555; text-decoration: none; }
     footer a:hover { color: #00897b; }
+
+    @media (max-width: 480px) {
+      .container { padding: 48px 16px 64px; }
+      .site-header h1 { font-size: 2.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -192,72 +263,89 @@
 <div class="container">
 
   <header class="site-header">
-    <p class="brand">Pahl Studio</p>
+    <p class="brand">Senior Mobile Engineer · Flutter &amp; Android</p>
     <h1>Eduardo Pahl</h1>
-    <p>Mobile Software Engineer with 5+ years in Flutter and Android, backed by 8 years of enterprise systems experience. These are side projects I build for fun, a playground for testing libraries, architectures, and new ideas.</p>
+    <p>I build mobile apps end to end in Flutter and native Android (Kotlin): architecture, offline sync, native integrations, automated tests and CI. Five years in mobile, after eight years in Java systems integration at Vivo (Telefônica Brasil).</p>
+    <p class="location">Curitiba, Brazil · working remotely</p>
     <div class="social-links">
-      <a class="social-link" href="https://github.com/eduardopahl" target="_blank" rel="noopener">GitHub</a>
       <a class="social-link" href="https://www.linkedin.com/in/eduardo-pahl/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="social-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">Play Store</a>
+      <a class="social-link" href="https://github.com/eduardopahl" target="_blank" rel="noopener">GitHub</a>
+      <a class="social-link" href="mailto:eduardopahl@gmail.com">Email</a>
     </div>
   </header>
 
-  <p class="section-title">Apps</p>
+  <p class="section-title">Now building</p>
+  <div class="card card-featured">
+    <span class="card-label">Co-founder · Flutter · Closed beta</span>
+    <span class="card-title">CoachUrself</span>
+    <span class="card-desc">A fitness app for iOS, Android and web that I'm co-founding with a partner. It's in closed beta, with launch planned for the first half of 2027, so there's nothing public to show yet. What I've built so far:</span>
+    <ul class="card-list">
+      <li>The entire Flutter app, from the first commit, on Clean Architecture and Riverpod.</li>
+      <li>Offline-first sync on Drift/SQLite: what users log without a connection waits in a local queue and is sent in order when they're back online.</li>
+      <li>A native Android notification for the live workout (a Kotlin foreground service driven over a MethodChannel): users complete sets, add rest time or skip it without opening the app.</li>
+      <li>1,000+ automated tests that CI runs before every build, with separate staging and production releases.</li>
+      <li>About half of the React and TypeScript web app.</li>
+    </ul>
+    <span class="card-note">Screenshots and details after launch.</span>
+  </div>
+
+  <p class="section-title">Side projects · Pahl Labs</p>
+  <p class="section-intro">Small apps I build on my own to try out libraries and patterns (Riverpod 3, Clean Architecture, AdMob, in-app purchases) and take all the way to <a href="https://play.google.com/store/apps/developer?id=Pahl+Labs" target="_blank" rel="noopener">Google Play</a>.</p>
   <div class="card-grid">
 
     <div class="card">
-      <div class="card-icon-wrap">🧾</div>
-      <span class="card-label">Android · iOS</span>
+      <div class="card-icon-wrap" aria-hidden="true">🧾</div>
+      <span class="card-label">Flutter · Google Play</span>
       <span class="card-title">QuickBill Splitter</span>
       <span class="card-desc">Split restaurant bills with ease. Add items, assign them to people, and share the result in seconds.</span>
       <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.quickbillsplitter" target="_blank" rel="noopener">▶ Google Play</a>
         <a class="card-link" href="privacy/quickbillsplitter/">🔒 Privacy</a>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-icon-wrap">💧</div>
-      <span class="card-label">Android · iOS · Open Source</span>
+      <div class="card-icon-wrap" aria-hidden="true">💧</div>
+      <span class="card-label">Flutter · Google Play · Open source</span>
       <span class="card-title">H2OSync</span>
       <span class="card-desc">Track your daily water intake and stay hydrated with smart reminders.</span>
       <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.h2osync" target="_blank" rel="noopener">▶ Google Play</a>
         <a class="card-link" href="https://github.com/eduardopahl/h2o_simple" target="_blank" rel="noopener">⤴ GitHub</a>
         <a class="card-link" href="privacy/h2o_simple/">🔒 Privacy</a>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-icon-wrap">🟣</div>
-      <span class="card-label">Android · iOS · Open Source</span>
+      <div class="card-icon-wrap" aria-hidden="true">🟣</div>
+      <span class="card-label">Flutter · Google Play · Open source</span>
       <span class="card-title">MoodDot</span>
       <span class="card-desc">Log your mood daily and visualize emotional patterns over time.</span>
       <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.mooddot" target="_blank" rel="noopener">▶ Google Play</a>
         <a class="card-link" href="https://github.com/eduardopahl/mood_dot" target="_blank" rel="noopener">⤴ GitHub</a>
         <a class="card-link" href="privacy/mooddot/">🔒 Privacy</a>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-icon-wrap">📓</div>
-      <span class="card-label">Android · iOS</span>
+      <div class="card-icon-wrap" aria-hidden="true">📓</div>
+      <span class="card-label">Flutter · Google Play</span>
       <span class="card-title">Micro-Journal</span>
       <span class="card-desc">One sentence a day, a minimalist journal limited to 500 characters. For busy people who want mental clarity without the overwhelm.</span>
       <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.microjournal" target="_blank" rel="noopener">▶ Google Play</a>
         <a class="card-link" href="privacy/microjournal/">🔒 Privacy</a>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-icon-wrap">⚔️</div>
-      <span class="card-label">Android · iOS</span>
+      <div class="card-icon-wrap" aria-hidden="true">⚔️</div>
+      <span class="card-label">Flutter · Google Play</span>
       <span class="card-title">Focus Realm</span>
       <span class="card-desc">A Pomodoro focus timer with RPG gamification. Complete focus sessions to earn XP and gold, level up your hero, and equip items from the Armory.</span>
       <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/developer?id=Pahl+Studio" target="_blank" rel="noopener">▶ Play Store</a>
+        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.focusrealm" target="_blank" rel="noopener">▶ Google Play</a>
         <a class="card-link" href="privacy/focusrealm/">🔒 Privacy</a>
       </div>
     </div>
@@ -269,7 +357,7 @@
   <footer>
     <span>&copy; 2026 Eduardo Pahl</span>
     <span>
-      <a href="mailto:incpahl@gmail.com">incpahl@gmail.com</a>
+      App support: <a href="mailto:incpahl@gmail.com">incpahl@gmail.com</a>
       &nbsp;·&nbsp;
       <a href="app-ads.txt">app-ads.txt</a>
     </span>
