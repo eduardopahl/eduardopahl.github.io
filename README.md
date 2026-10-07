@@ -1,5 +1,5 @@
-# Eduardo Pahl – Small Apps
+# Eduardo Pahl
 
-Portfolio and hub for my small apps and projects.
+Personal page (mobile developer, Flutter and native Android), plus privacy policies and app-ads.txt for my personal Google Play apps.
 
 **[eduardopahl.github.io](https://eduardopahl.github.io/)**
