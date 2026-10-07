@@ -300,6 +300,74 @@
       .shot { flex-basis: 62%; }
     }
 
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 14px;
+      background: rgba(5, 5, 6, 0.97);
+      padding: 56px 16px 24px;
+      touch-action: pan-y;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-height: calc(100vh - 140px);
+      max-width: min(92vw, 460px);
+      width: auto;
+      height: auto;
+      border-radius: 22px;
+      border: 1px solid #2f2f34;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .lb-caption {
+      font-size: 0.85rem;
+      color: #b5b5b5;
+      text-align: center;
+    }
+
+    .lb-count { color: #6f6f6f; margin-left: 8px; }
+
+    .lb-btn {
+      position: absolute;
+      border: 1px solid #2f2f34;
+      background: rgba(24, 24, 27, 0.9);
+      color: #e8e8e8;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .lb-btn:hover { border-color: #00897b; color: #26c6b0; }
+    .lb-btn:focus-visible { outline: 2px solid #26c6b0; outline-offset: 2px; }
+    .lb-close { top: 14px; right: 14px; }
+    .lb-prev { left: max(12px, calc(50% - 300px)); top: 50%; transform: translateY(-50%); }
+    .lb-next { right: max(12px, calc(50% - 300px)); top: 50%; transform: translateY(-50%); }
+
+    @media (max-width: 480px) {
+      .lb-prev, .lb-next { top: auto; bottom: 18px; transform: none; }
+      .lb-prev { left: calc(50% - 60px); }
+      .lb-next { right: calc(50% - 60px); }
+      .lightbox { padding-bottom: 84px; }
+      .lightbox img { max-height: calc(100vh - 170px); }
+    }
+
     /* Footer */
     hr { border: none; border-top: 1px solid #2a2a2e; margin: 48px 0; }
 
@@ -355,35 +423,35 @@
     <p class="shots-label">Closed alpha · Android build</p>
     <div class="shots" aria-label="CoachUrself screenshots">
       <figure class="shot">
-        <a href="images/coachurself/01-workouts.jpg" target="_blank" rel="noopener"><img src="images/coachurself/01-workouts.jpg" alt="CoachUrself: Workout library" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/01-workouts.jpg"><img src="images/coachurself/01-workouts.jpg" alt="CoachUrself: Workout library" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Workout library</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/02-workout-plan.jpg" target="_blank" rel="noopener"><img src="images/coachurself/02-workout-plan.jpg" alt="CoachUrself: Workout plan with personal records" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/02-workout-plan.jpg"><img src="images/coachurself/02-workout-plan.jpg" alt="CoachUrself: Workout plan with personal records" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Workout plan with personal records</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/03-workout-progress.jpg" target="_blank" rel="noopener"><img src="images/coachurself/03-workout-progress.jpg" alt="CoachUrself: Progress per workout" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/03-workout-progress.jpg"><img src="images/coachurself/03-workout-progress.jpg" alt="CoachUrself: Progress per workout" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Progress per workout</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/04-sessions.jpg" target="_blank" rel="noopener"><img src="images/coachurself/04-sessions.jpg" alt="CoachUrself: Session history" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/04-sessions.jpg"><img src="images/coachurself/04-sessions.jpg" alt="CoachUrself: Session history" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Session history</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/05-dashboard.jpg" target="_blank" rel="noopener"><img src="images/coachurself/05-dashboard.jpg" alt="CoachUrself: Dashboard: consistency and trends" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/05-dashboard.jpg"><img src="images/coachurself/05-dashboard.jpg" alt="CoachUrself: Dashboard: consistency and trends" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Dashboard: consistency and trends</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/06-records.jpg" target="_blank" rel="noopener"><img src="images/coachurself/06-records.jpg" alt="CoachUrself: Scoreboard, records and muscle split" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/06-records.jpg"><img src="images/coachurself/06-records.jpg" alt="CoachUrself: Scoreboard, records and muscle split" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Scoreboard, records and muscle split</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/07-share-card.jpg" target="_blank" rel="noopener"><img src="images/coachurself/07-share-card.jpg" alt="CoachUrself: Shareable workout summary" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/07-share-card.jpg"><img src="images/coachurself/07-share-card.jpg" alt="CoachUrself: Shareable workout summary" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Shareable workout summary</figcaption>
       </figure>
       <figure class="shot">
-        <a href="images/coachurself/08-settings.jpg" target="_blank" rel="noopener"><img src="images/coachurself/08-settings.jpg" alt="CoachUrself: Settings: biometric login, language, units" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <a href="images/coachurself/08-settings.jpg"><img src="images/coachurself/08-settings.jpg" alt="CoachUrself: Settings: biometric login, language, units" width="720" height="1560" loading="lazy" decoding="async" /></a>
         <figcaption>Settings: biometric login, language, units</figcaption>
       </figure>
     </div>
@@ -462,5 +530,75 @@
   </footer>
 
 </div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="CoachUrself screenshot viewer" hidden>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+  <img alt="" />
+  <p class="lb-caption"><span class="lb-text"></span><span class="lb-count"></span></p>
+  <button class="lb-btn lb-next" type="button" aria-label="Next screenshot">&#8250;</button>
+</div>
+
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.shot a'));
+  var box = document.getElementById('lightbox');
+  if (!links.length || !box) return;
+  var img = box.querySelector('img');
+  var text = box.querySelector('.lb-text');
+  var count = box.querySelector('.lb-count');
+  var current = 0, lastFocus = null, startX = null;
+
+  function show(i) {
+    current = (i + links.length) % links.length;
+    var a = links[current];
+    img.src = a.getAttribute('href');
+    img.alt = a.querySelector('img').alt;
+    text.textContent = a.parentNode.querySelector('figcaption').textContent;
+    count.textContent = (current + 1) + ' / ' + links.length;
+    [current + 1, current - 1].forEach(function (n) {
+      var pre = new Image();
+      pre.src = links[(n + links.length) % links.length].getAttribute('href');
+    });
+  }
+
+  function open(i) {
+    lastFocus = document.activeElement;
+    show(i);
+    box.hidden = false;
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    box.querySelector('.lb-next').focus();
+  }
+
+  function close() {
+    box.classList.remove('open');
+    box.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  links.forEach(function (a, i) {
+    a.addEventListener('click', function (e) { e.preventDefault(); open(i); });
+  });
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', function () { show(current - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function () { show(current + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') show(current + 1);
+    else if (e.key === 'ArrowLeft') show(current - 1);
+  });
+  box.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', function (e) {
+    if (startX === null) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+})();
+</script>
 </body>
 </html>
