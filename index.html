@@ -139,6 +139,7 @@
 
     /* Featured card (current work) */
     .card-featured {
+      min-width: 0;
       margin-bottom: 48px;
       border-color: #1f4f4a;
       background: linear-gradient(180deg, #16201f 0%, #18181b 60%);
@@ -234,6 +235,71 @@
 
     .card-link:hover { text-decoration: underline; }
 
+    /* App screenshots (CoachUrself) */
+    .shots-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #6f6f6f;
+      margin-top: 22px;
+    }
+
+    .shots {
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 10px 2px 14px;
+      margin: 0 -2px;
+      scrollbar-width: thin;
+      scrollbar-color: #2a2a2e transparent;
+    }
+
+    .shots::-webkit-scrollbar { height: 6px; }
+    .shots::-webkit-scrollbar-thumb { background: #2a2a2e; border-radius: 999px; }
+
+    .shot {
+      flex: 0 0 168px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .shot a {
+      display: block;
+      border-radius: 22px;
+      border: 1px solid #2f2f34;
+      background: #0b0b0c;
+      padding: 5px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+
+    .shot a:hover { border-color: #00897b; transform: translateY(-2px); }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 720 / 1560;
+      border-radius: 17px;
+    }
+
+    .shot figcaption {
+      font-size: 0.76rem;
+      color: #8a8a8a;
+      line-height: 1.4;
+      padding: 0 4px;
+    }
+
+    @media (max-width: 480px) {
+      .shot { flex-basis: 62%; }
+    }
+
     /* Footer */
     hr { border: none; border-top: 1px solid #2a2a2e; margin: 48px 0; }
 
@@ -278,7 +344,7 @@
   <div class="card card-featured">
     <span class="card-label">Co-founder · Flutter · Closed alpha</span>
     <span class="card-title">CoachUrself</span>
-    <span class="card-desc">A fitness app for iOS, Android and web that I co-founded with a backend developer. It's in closed alpha, so there's nothing public to show yet. What I built:</span>
+    <span class="card-desc">A fitness app for iOS, Android and web that I co-founded with a backend developer, now in closed alpha. What I built:</span>
     <ul class="card-list">
       <li>The entire Flutter app, from requirements to closed alpha, on Clean Architecture and Riverpod.</li>
       <li>Offline-first sync on Drift/SQLite: what users log without a connection waits in a local queue and is sent in order when they're back online.</li>
@@ -286,6 +352,41 @@
       <li>1,000+ automated tests that CI runs before every build, with separate staging and production releases.</li>
       <li>About half of the React and TypeScript web app.</li>
     </ul>
+    <p class="shots-label">Closed alpha · Android build</p>
+    <div class="shots" aria-label="CoachUrself screenshots">
+      <figure class="shot">
+        <a href="images/coachurself/01-workouts.jpg" target="_blank" rel="noopener"><img src="images/coachurself/01-workouts.jpg" alt="CoachUrself: Workout library" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Workout library</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/02-workout-plan.jpg" target="_blank" rel="noopener"><img src="images/coachurself/02-workout-plan.jpg" alt="CoachUrself: Workout plan with personal records" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Workout plan with personal records</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/03-workout-progress.jpg" target="_blank" rel="noopener"><img src="images/coachurself/03-workout-progress.jpg" alt="CoachUrself: Progress per workout" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Progress per workout</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/04-sessions.jpg" target="_blank" rel="noopener"><img src="images/coachurself/04-sessions.jpg" alt="CoachUrself: Session history" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Session history</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/05-dashboard.jpg" target="_blank" rel="noopener"><img src="images/coachurself/05-dashboard.jpg" alt="CoachUrself: Dashboard: consistency and trends" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Dashboard: consistency and trends</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/06-records.jpg" target="_blank" rel="noopener"><img src="images/coachurself/06-records.jpg" alt="CoachUrself: Scoreboard, records and muscle split" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Scoreboard, records and muscle split</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/07-share-card.jpg" target="_blank" rel="noopener"><img src="images/coachurself/07-share-card.jpg" alt="CoachUrself: Shareable workout summary" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Shareable workout summary</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/08-settings.jpg" target="_blank" rel="noopener"><img src="images/coachurself/08-settings.jpg" alt="CoachUrself: Settings: biometric login, language, units" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Settings: biometric login, language, units</figcaption>
+      </figure>
+    </div>
   </div>
 
   <p class="section-title">Personal experiments</p>
