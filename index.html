@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eduardo Pahl · Mobile Developer</title>
-  <meta name="description" content="Eduardo Pahl, mobile developer (Flutter and native Android/Kotlin) in Curitiba, Brazil, working remotely. Co-founder of CoachUrself." />
+  <meta name="description" content="Eduardo Pahl, mobile developer (Flutter and native Android/Kotlin) in Curitiba, Brazil, working remotely. Co-founder of CoachUrself, a workout tracker in closed alpha." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eduardopahl.github.io/" />
   <meta property="og:title" content="Eduardo Pahl · Mobile Developer" />
@@ -235,6 +235,15 @@
 
     .card-link:hover { text-decoration: underline; }
 
+    .card-sub {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #6f6f6f;
+      margin-top: 14px;
+    }
+
     /* App screenshots (CoachUrself) */
     .shots-label {
       font-size: 0.7rem;
@@ -412,12 +421,13 @@
   <div class="card card-featured">
     <span class="card-label">Co-founder · Flutter · Closed alpha</span>
     <span class="card-title">CoachUrself</span>
-    <span class="card-desc">A fitness app for iOS, Android and web that I co-founded with a backend developer, now in closed alpha. What I built:</span>
+    <span class="card-desc">A workout tracker for people who follow their own training: build workouts and programs, run sessions with a rest timer, and track records, volume and body measurements over time. iOS, Android and web. I co-founded it with a backend developer, and it's in closed alpha.</span>
+    <p class="card-sub">What I built</p>
     <ul class="card-list">
-      <li>The entire Flutter app, from requirements to closed alpha, on Clean Architecture and Riverpod.</li>
-      <li>Offline-first sync on Drift/SQLite: what users log without a connection waits in a local queue and is sent in order when they're back online.</li>
-      <li>A native Android notification for the live workout (a Kotlin foreground service driven over a MethodChannel): users complete sets, add rest time or skip it without opening the app.</li>
-      <li>1,000+ automated tests that CI runs before every build, with separate staging and production releases.</li>
+      <li>The whole Flutter app, from requirements to closed alpha: every screen below, on Clean Architecture and Riverpod.</li>
+      <li>Offline-first data: every change is saved locally first (Drift/SQLite) and synced in order. Items created offline get temporary IDs that are swapped for the server's once they sync, so the full training loop works in airplane mode.</li>
+      <li>A native Android live workout: a Kotlin foreground service, driven over a MethodChannel, keeps the session and rest timer in the notification, so sets can be logged or rest skipped without opening the app.</li>
+      <li>Nearly 900 automated tests. CI runs them in four time zones, from UTC&minus;8 to UTC+12:45, to catch date and daylight-saving bugs, then signs and ships staging or production builds to testers.</li>
       <li>About half of the React and TypeScript web app.</li>
     </ul>
     <p class="shots-label">Closed alpha · Android build</p>
