@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eduardo Pahl · Mobile Developer</title>
-  <meta name="description" content="Eduardo Pahl, mobile developer (Flutter and native Android/Kotlin) in Curitiba, Brazil, working remotely. Co-founder of CoachUrself, a workout tracker in closed alpha." />
+  <meta name="description" content="Eduardo Pahl, mobile developer (Flutter and native Android/Kotlin) in Curitiba, Brazil, working remotely. Co-founder of CoachUrself, a workout tracker in closed alpha, and maker of Ashborne, a survival roguelite on Google Play." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eduardopahl.github.io/" />
   <meta property="og:image" content="https://eduardopahl.github.io/images/og-cover.jpg" />
@@ -12,7 +12,7 @@
   <meta property="og:image:height" content="627" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:title" content="Eduardo Pahl · Mobile Developer" />
-  <meta property="og:description" content="Flutter and native Android (Kotlin). Co-founder of CoachUrself." />
+  <meta property="og:description" content="Flutter and native Android (Kotlin). Co-founder of CoachUrself, maker of Ashborne on Google Play." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -248,7 +248,7 @@
       margin-top: 14px;
     }
 
-    /* App screenshots (CoachUrself) */
+    /* App screenshots */
     .shots-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -421,6 +421,60 @@
     </div>
   </header>
 
+  <p class="section-title">On Google Play</p>
+  <div class="card card-featured">
+    <span class="card-label">Solo · Unity · Android · Google Play</span>
+    <span class="card-title">Ashborne: Survival Roguelite</span>
+    <span class="card-desc">A survival roguelite played in portrait with one thumb. Pick one of six heroes, each with a signature spell that grows from rank 1 to 12, and hold out against a horde that grows with the clock, with a boss every minute. Reaching ten minutes is a feat. Plays offline; every ad is an optional video.</span>
+    <p class="card-sub">What I built</p>
+    <ul class="card-list">
+      <li>The whole game, alone, in Unity 6 (URP, mobile): six heroes with their own spells and cards, ten bosses, four maps, timed events and challenges, meta progression and a bestiary.</li>
+      <li>A horde of hundreds of enemies on screen, moved by C# Jobs compiled with Burst and drawn in instanced batches.</li>
+      <li>Spell effects written by hand as HLSL shaders: fireballs, shadow bolts, arrows with trails, a poison cloud, the Ranger's camouflage.</li>
+      <li>Monetization without pressure: rewarded videos only (LevelPlay mediation) and a one-time Supporter Pack plus tips through Google Play Billing.</li>
+      <li>About 4,000 automated tests, plus a headless bot that plays whole runs to measure balance between heroes.</li>
+    </ul>
+    <div class="card-links" style="margin-top: 16px;">
+      <a class="card-link" href="https://play.google.com/store/apps/details?id=com.catbytelabs.ashborne" target="_blank" rel="noopener">▶ Google Play</a>
+      <a class="card-link" href="privacy/ashborne/">🔒 Privacy</a>
+    </div>
+    <p class="shots-label">Android · screenshots</p>
+    <div class="shots" aria-label="Ashborne screenshots">
+      <figure class="shot">
+        <a href="images/ashborne/01.jpg"><img src="images/ashborne/01.jpg" alt="Ashborne: The Mage against a dense horde in the Emberpan" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>The Mage against a dense horde in the Emberpan</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/02.jpg"><img src="images/ashborne/02.jpg" alt="Ashborne: Level-up: three cards to choose from" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>Level-up: three cards to choose from</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/03.jpg"><img src="images/ashborne/03.jpg" alt="Ashborne: A boss at night, its attack marked on the ground" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>A boss at night, its attack marked on the ground</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/04.jpg"><img src="images/ashborne/04.jpg" alt="Ashborne: The six heroes" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>The six heroes</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/05.jpg"><img src="images/ashborne/05.jpg" alt="Ashborne: The Warlock's skeletons fighting the horde" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>The Warlock's skeletons fighting the horde</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/06.jpg"><img src="images/ashborne/06.jpg" alt="Ashborne: Enchantments: permanent upgrades bought with Ember" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>Enchantments: permanent upgrades bought with Ember</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/07.jpg"><img src="images/ashborne/07.jpg" alt="Ashborne: Best time per hero and map" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>Best time per hero and map</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/ashborne/08.jpg"><img src="images/ashborne/08.jpg" alt="Ashborne: Results: time survived and Ember earned" width="720" height="1280" loading="lazy" decoding="async" /></a>
+        <figcaption>Results: time survived and Ember earned</figcaption>
+      </figure>
+    </div>
+  </div>
+
   <p class="section-title">Now building</p>
   <div class="card card-featured">
     <span class="card-label">Co-founder · Flutter · Closed alpha</span>
@@ -471,77 +525,6 @@
     </div>
   </div>
 
-  <p class="section-title">Personal experiments</p>
-  <p class="section-intro">Small apps I made for fun, to try new libraries and patterns (Riverpod 3, AdMob, in-app purchases) and go through a full <a href="https://play.google.com/store/apps/developer?id=Pahl+Labs" target="_blank" rel="noopener">Google Play</a> release. Practice, not products.</p>
-  <div class="card-grid">
-
-    <div class="card">
-      <div class="card-icon-wrap" aria-hidden="true">🧾</div>
-      <span class="card-label">Flutter · Google Play</span>
-      <span class="card-title">QuickBill Splitter</span>
-      <span class="card-desc">Split restaurant bills with ease. Add items, assign them to people, and share the result in seconds.</span>
-      <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.quickbillsplitter" target="_blank" rel="noopener">▶ Google Play</a>
-        <a class="card-link" href="privacy/quickbillsplitter/">🔒 Privacy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-icon-wrap" aria-hidden="true">💧</div>
-      <span class="card-label">Flutter · Google Play</span>
-      <span class="card-title">H2OSync</span>
-      <span class="card-desc">Track your daily water intake and stay hydrated with smart reminders.</span>
-      <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.h2osync" target="_blank" rel="noopener">▶ Google Play</a>
-        <a class="card-link" href="privacy/h2o_simple/">🔒 Privacy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-icon-wrap" aria-hidden="true">🟣</div>
-      <span class="card-label">Flutter · Google Play</span>
-      <span class="card-title">MoodDot</span>
-      <span class="card-desc">Log your mood daily and visualize emotional patterns over time.</span>
-      <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.mooddot" target="_blank" rel="noopener">▶ Google Play</a>
-        <a class="card-link" href="privacy/mooddot/">🔒 Privacy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-icon-wrap" aria-hidden="true">📓</div>
-      <span class="card-label">Flutter · Google Play</span>
-      <span class="card-title">Micro-Journal</span>
-      <span class="card-desc">One sentence a day, a minimalist journal limited to 500 characters. For busy people who want mental clarity without the overwhelm.</span>
-      <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.microjournal" target="_blank" rel="noopener">▶ Google Play</a>
-        <a class="card-link" href="privacy/microjournal/">🔒 Privacy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-icon-wrap" aria-hidden="true">⚔️</div>
-      <span class="card-label">Flutter · Google Play</span>
-      <span class="card-title">Focus Realm</span>
-      <span class="card-desc">A Pomodoro focus timer with RPG gamification. Complete focus sessions to earn XP and gold, level up your hero, and equip items from the Armory.</span>
-      <div class="card-links">
-        <a class="card-link" href="https://play.google.com/store/apps/details?id=com.incpahl.focusrealm" target="_blank" rel="noopener">▶ Google Play</a>
-        <a class="card-link" href="privacy/focusrealm/">🔒 Privacy</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-icon-wrap" aria-hidden="true">🔥</div>
-      <span class="card-label">Unity · Android</span>
-      <span class="card-title">Ashborne</span>
-      <span class="card-desc">A survival roguelite for Android. Pick one of six heroes, each with a single spell, and outlast a horde that never stops coming. One thumb, portrait, plays offline.</span>
-      <div class="card-links">
-        <a class="card-link" href="privacy/ashborne/">🔒 Privacy</a>
-      </div>
-    </div>
-
-  </div>
-
   <hr />
 
   <footer>
@@ -555,7 +538,7 @@
 
 </div>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="CoachUrself screenshot viewer" hidden>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
   <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
   <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
   <img alt="" />
@@ -565,9 +548,10 @@
 
 <script>
 (function () {
-  var links = Array.prototype.slice.call(document.querySelectorAll('.shot a'));
+  var all = Array.prototype.slice.call(document.querySelectorAll('.shot a'));
+  var links = all;
   var box = document.getElementById('lightbox');
-  if (!links.length || !box) return;
+  if (!all.length || !box) return;
   var img = box.querySelector('img');
   var text = box.querySelector('.lb-text');
   var count = box.querySelector('.lb-count');
@@ -602,8 +586,12 @@
     if (lastFocus) lastFocus.focus();
   }
 
-  links.forEach(function (a, i) {
-    a.addEventListener('click', function (e) { e.preventDefault(); open(i); });
+  all.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      links = Array.prototype.slice.call(a.closest('.shots').querySelectorAll('.shot a'));
+      open(links.indexOf(a));
+    });
   });
   box.querySelector('.lb-close').addEventListener('click', close);
   box.querySelector('.lb-prev').addEventListener('click', function () { show(current - 1); });
