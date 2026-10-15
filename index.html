@@ -421,6 +421,56 @@
     </div>
   </header>
 
+  <p class="section-title">Now building</p>
+  <div class="card card-featured">
+    <span class="card-label">Co-founder · Flutter · Closed alpha</span>
+    <span class="card-title">CoachUrself</span>
+    <span class="card-desc">A workout tracker for people who follow their own training: build workouts and programs, run sessions with a rest timer, and track records, volume and body measurements over time. iOS, Android and web. I co-founded it with a backend developer, and it's in closed alpha.</span>
+    <p class="card-sub">What I built</p>
+    <ul class="card-list">
+      <li>The whole Flutter app, from requirements to closed alpha: every screen below, on Clean Architecture and Riverpod.</li>
+      <li>Offline-first data: every change is saved locally first (Drift/SQLite) and synced in order. Items created offline get temporary IDs that are swapped for the server's once they sync, so the full training loop works in airplane mode.</li>
+      <li>A native Android live workout: a Kotlin foreground service, driven over a MethodChannel, keeps the session and rest timer in the notification, so sets can be logged or rest skipped without opening the app.</li>
+      <li>Nearly 900 automated tests. CI runs them in four time zones, from UTC&minus;8 to UTC+12:45, to catch date and daylight-saving bugs, then signs and ships staging or production builds to testers.</li>
+      <li>About half of the React and TypeScript web app.</li>
+    </ul>
+    <p class="shots-label">Closed alpha · Android build</p>
+    <div class="shots" aria-label="CoachUrself screenshots">
+      <figure class="shot">
+        <a href="images/coachurself/01-workouts.jpg"><img src="images/coachurself/01-workouts.jpg" alt="CoachUrself: Workout library" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Workout library</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/02-workout-plan.jpg"><img src="images/coachurself/02-workout-plan.jpg" alt="CoachUrself: Workout plan with personal records" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Workout plan with personal records</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/03-workout-progress.jpg"><img src="images/coachurself/03-workout-progress.jpg" alt="CoachUrself: Progress per workout" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Progress per workout</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/04-sessions.jpg"><img src="images/coachurself/04-sessions.jpg" alt="CoachUrself: Session history" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Session history</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/05-dashboard.jpg"><img src="images/coachurself/05-dashboard.jpg" alt="CoachUrself: Dashboard: consistency and trends" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Dashboard: consistency and trends</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/06-records.jpg"><img src="images/coachurself/06-records.jpg" alt="CoachUrself: Scoreboard, records and muscle split" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Scoreboard, records and muscle split</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/07-share-card.jpg"><img src="images/coachurself/07-share-card.jpg" alt="CoachUrself: Shareable workout summary" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Shareable workout summary</figcaption>
+      </figure>
+      <figure class="shot">
+        <a href="images/coachurself/08-settings.jpg"><img src="images/coachurself/08-settings.jpg" alt="CoachUrself: Settings: biometric login, language, units" width="720" height="1560" loading="lazy" decoding="async" /></a>
+        <figcaption>Settings: biometric login, language, units</figcaption>
+      </figure>
+    </div>
+  </div>
+
   <p class="section-title">On Google Play</p>
   <div class="card card-featured">
     <span class="card-label">Solo · Unity · Android · Google Play</span>
@@ -475,54 +525,45 @@
     </div>
   </div>
 
-  <p class="section-title">Now building</p>
-  <div class="card card-featured">
-    <span class="card-label">Co-founder · Flutter · Closed alpha</span>
-    <span class="card-title">CoachUrself</span>
-    <span class="card-desc">A workout tracker for people who follow their own training: build workouts and programs, run sessions with a rest timer, and track records, volume and body measurements over time. iOS, Android and web. I co-founded it with a backend developer, and it's in closed alpha.</span>
-    <p class="card-sub">What I built</p>
-    <ul class="card-list">
-      <li>The whole Flutter app, from requirements to closed alpha: every screen below, on Clean Architecture and Riverpod.</li>
-      <li>Offline-first data: every change is saved locally first (Drift/SQLite) and synced in order. Items created offline get temporary IDs that are swapped for the server's once they sync, so the full training loop works in airplane mode.</li>
-      <li>A native Android live workout: a Kotlin foreground service, driven over a MethodChannel, keeps the session and rest timer in the notification, so sets can be logged or rest skipped without opening the app.</li>
-      <li>Nearly 900 automated tests. CI runs them in four time zones, from UTC&minus;8 to UTC+12:45, to catch date and daylight-saving bugs, then signs and ships staging or production builds to testers.</li>
-      <li>About half of the React and TypeScript web app.</li>
-    </ul>
-    <p class="shots-label">Closed alpha · Android build</p>
-    <div class="shots" aria-label="CoachUrself screenshots">
-      <figure class="shot">
-        <a href="images/coachurself/01-workouts.jpg"><img src="images/coachurself/01-workouts.jpg" alt="CoachUrself: Workout library" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Workout library</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/02-workout-plan.jpg"><img src="images/coachurself/02-workout-plan.jpg" alt="CoachUrself: Workout plan with personal records" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Workout plan with personal records</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/03-workout-progress.jpg"><img src="images/coachurself/03-workout-progress.jpg" alt="CoachUrself: Progress per workout" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Progress per workout</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/04-sessions.jpg"><img src="images/coachurself/04-sessions.jpg" alt="CoachUrself: Session history" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Session history</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/05-dashboard.jpg"><img src="images/coachurself/05-dashboard.jpg" alt="CoachUrself: Dashboard: consistency and trends" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Dashboard: consistency and trends</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/06-records.jpg"><img src="images/coachurself/06-records.jpg" alt="CoachUrself: Scoreboard, records and muscle split" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Scoreboard, records and muscle split</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/07-share-card.jpg"><img src="images/coachurself/07-share-card.jpg" alt="CoachUrself: Shareable workout summary" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Shareable workout summary</figcaption>
-      </figure>
-      <figure class="shot">
-        <a href="images/coachurself/08-settings.jpg"><img src="images/coachurself/08-settings.jpg" alt="CoachUrself: Settings: biometric login, language, units" width="720" height="1560" loading="lazy" decoding="async" /></a>
-        <figcaption>Settings: biometric login, language, units</figcaption>
-      </figure>
+  <p class="section-title">Other apps</p>
+  <p class="section-intro">Small apps I made to try new libraries and patterns (Riverpod 3, AdMob, in-app purchases) and to go through a full Google Play release.</p>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-icon-wrap" aria-hidden="true">🧾</div>
+      <span class="card-label">Flutter · Android</span>
+      <span class="card-title">QuickBill Splitter</span>
+      <span class="card-desc">Split restaurant bills: add items, assign them to people and share the result.</span>
     </div>
+
+    <div class="card">
+      <div class="card-icon-wrap" aria-hidden="true">💧</div>
+      <span class="card-label">Flutter · Android</span>
+      <span class="card-title">H2OSync</span>
+      <span class="card-desc">Track daily water intake, with reminders.</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-wrap" aria-hidden="true">🟣</div>
+      <span class="card-label">Flutter · Android</span>
+      <span class="card-title">MoodDot</span>
+      <span class="card-desc">Log your mood daily and see patterns over time.</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-wrap" aria-hidden="true">📓</div>
+      <span class="card-label">Flutter · Android</span>
+      <span class="card-title">Micro-Journal</span>
+      <span class="card-desc">One sentence a day: a minimalist journal limited to 500 characters.</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon-wrap" aria-hidden="true">⚔️</div>
+      <span class="card-label">Flutter · Android</span>
+      <span class="card-title">Focus Realm</span>
+      <span class="card-desc">A Pomodoro focus timer with RPG progression: focus sessions earn XP and gold.</span>
+    </div>
+
   </div>
 
   <hr />
